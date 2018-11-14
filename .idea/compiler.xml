@@ -6,14 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo" />
+        <module name="cont1" />
         <module name="demo-config" />
+        <module name="demo-elasticsearch" />
         <module name="demo-netty" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cont1" target="1.8" />
       <module name="demo" target="1.8" />
       <module name="demo-config" target="1.8" />
+      <module name="demo-elasticsearch" target="1.8" />
       <module name="demo-netty" target="1.8" />
     </bytecodeTargetLevel>
   </component>

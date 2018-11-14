@@ -1,6 +1,5 @@
 package com.jfree.demo.config;
 
-import javax.validation.constraints.NotNull;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.*;
@@ -64,7 +63,7 @@ public class DateUtil {
         return zonedDateTime.toLocalDate();
     }
 
-    public static LocalDate timestampToLocalDate(@NotNull long timestamp) {
+    public static LocalDate timestampToLocalDate( long timestamp) {
         Instant instant = Instant.ofEpochMilli(timestamp);
         ZoneId zone = ZoneId.systemDefault();
         LocalDateTime dateTime = LocalDateTime.ofInstant(instant, zone);
@@ -72,7 +71,7 @@ public class DateUtil {
         return LocalDate.parse(dateStr);
     }
 
-    public static LocalDateTime timestampToLocalDateTime(@NotNull long timestamp) {
+    public static LocalDateTime timestampToLocalDateTime( long timestamp) {
         Instant instant = Instant.ofEpochMilli(timestamp);
         ZoneId zone = ZoneId.systemDefault();
         LocalDateTime dateTime = LocalDateTime.ofInstant(instant, zone);
@@ -100,7 +99,7 @@ public class DateUtil {
      * @param end
      * @return
      */
-    public static List<Long> calcDate(@NotNull LocalDate begin, @NotNull LocalDate end) {
+    public static List<Long> calcDate( LocalDate begin,  LocalDate end) {
 
         List<Long> list = new ArrayList<>();
         final Long day = 24 * 60 * 60 * 1000L;

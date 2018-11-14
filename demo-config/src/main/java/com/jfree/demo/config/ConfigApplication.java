@@ -1,12 +1,12 @@
-package com.jfree.demo;
+package com.jfree.demo.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoConfigApplication {
+public class ConfigApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoConfigApplication.class, args);
+		SpringApplication.run(ConfigApplication.class, args);
 	}
 }

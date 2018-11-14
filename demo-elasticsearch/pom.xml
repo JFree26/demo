@@ -4,18 +4,19 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.jfree.demo</groupId>
-	<artifactId>demo-config</artifactId>
+	<artifactId>demo-elasticsearch</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>demo-config</name>
-	<description>Demo project for Spring Boot</description>
+	<name>demo-elasticsearch</name>
+
 
 	<parent>
 		<groupId>com.jfree.demo</groupId>
 		<artifactId>demo</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -25,16 +26,9 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<artifactId>spring-boot-starter-data-elasticsearch</artifactId>
 		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>

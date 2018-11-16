@@ -1,5 +1,8 @@
 package com.jfree.demo.netty;
 
+import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
+
+import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -70,5 +73,15 @@ public class Constant {
             }
         }
         return null;
+    }
+
+    public  static void sendAll(String msg) {
+        if (msg != null&&online.size()>0) {
+            Collection<MyNettyHandler> cn = online.values();
+            for (MyNettyHandler mr : cn) {
+                mr.getCtx().channel().writeAndFlush(new TextWebSocketFrame(msg));
+            }
+
+        }
     }
 }

@@ -46,7 +46,7 @@ public class NettyServer {
                     });
             ChannelFuture f = sp.bind().sync();
             Constant.ip = f.channel().localAddress().toString();
-            System.out.println("netty服务启动");
+            System.out.println("-------------------netty服务启动-------------------");
             f.channel().closeFuture().sync();
         } finally {
             work.shutdownGracefully().sync();

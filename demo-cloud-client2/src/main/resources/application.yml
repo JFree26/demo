@@ -11,4 +11,13 @@ eureka:
       serviceUrl:
            defaultZone: http://127.0.0.1:8171/eureka/
 
-feign.hystrix.enabled: true
+feign:
+  hystrix:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000

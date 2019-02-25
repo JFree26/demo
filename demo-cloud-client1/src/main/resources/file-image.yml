@@ -1,0 +1,7 @@
+
+
+message:
+  fileSize: 4194304L #文件压缩大小(大于4兆压缩)
+  upPath: D://image #图片保存路径
+  scaleRatio: 0.2D #压缩比例
+  imageType: png,jpg,jpeg #图片类型

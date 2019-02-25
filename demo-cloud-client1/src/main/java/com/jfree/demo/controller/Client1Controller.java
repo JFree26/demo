@@ -10,11 +10,7 @@ public class Client1Controller {
 
     @GetMapping("/mathInt")
     public double math() {
-        try {
-            Thread.sleep(3111);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        System.out.println("----------------------double=" + Math.random());
         return Math.random();
     }
 }

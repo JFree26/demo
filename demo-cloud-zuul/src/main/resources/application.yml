@@ -1,0 +1,32 @@
+
+
+server:
+  port: 8999
+
+
+spring:
+  application:
+    name: service-zuul
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8171/eureka/
+
+
+zuul:
+  routes:
+    client1:
+      path: /api1/**
+      serviceId: client-1
+    client2:
+      path: /api2/**
+      serviceId: client-2
+  prefix: /v1
+  retryable: true
+
+#l路由重试，熔断器降级失败？？？,大文件上传绕过disachservletrequest,client2关闭ServerFallback被调用两次，errfilter调用一次
+
+
+

@@ -11,6 +11,7 @@ public class Client1Controller {
     @GetMapping("/mathInt")
     public double math() {
         System.out.println("----------------------double=" + Math.random());
+
         return Math.random();
     }
 }
